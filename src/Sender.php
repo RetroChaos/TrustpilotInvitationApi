@@ -2,29 +2,28 @@
 
 namespace Trustpilot\Api\Invitation;
 
-class Sender
-{
+class Sender {
     /**
      * @var string
      */
-    private $email;
+    private string $email;
 
     /**
      * @var string
      */
-    private $name;
+    private string $name;
 
     /**
      * @var string
      */
-    private $replyEmail;
+    private string $replyEmail;
 
     /**
      * @param string $email
      * @param string $name
      * @param string $replyEmail
      */
-    public function __construct($email, $name, $replyEmail)
+    public function __construct(string $email, string $name, string $replyEmail)
     {
         $this->email = $email;
         $this->name = $name;
@@ -34,24 +33,21 @@ class Sender
     /**
      * @return string
      */
-    public function getEmail()
-    {
+    public function getEmail(): string {
         return $this->email;
     }
 
     /**
      * @return string
      */
-    public function getName()
-    {
+    public function getName(): string {
         return $this->name;
     }
 
     /**
      * @return string
      */
-    public function getReplyEmail()
-    {
+    public function getReplyEmail(): string {
         return $this->replyEmail;
     }
 }

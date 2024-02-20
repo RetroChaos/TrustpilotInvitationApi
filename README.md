@@ -1,21 +1,17 @@
 # Trustpilot Invitation API Client
 
-[![Latest Stable Version](https://poser.pugx.org/moneymaxim/trustpilot-invitation-api/v/stable)](https://packagist.org/packages/moneymaxim/trustpilot-invitation-api)
-[![Total Downloads](https://poser.pugx.org/moneymaxim/trustpilot-invitation-api/downloads)](https://packagist.org/packages/moneymaxim/trustpilot-invitation-api)
-[![License](https://poser.pugx.org/moneymaxim/trustpilot-invitation-api/license)](https://packagist.org/packages/moneymaxim/trustpilot-invitation-api)
-
 A PHP library for accessing the [Trustpilot Invitation API](https://developers.trustpilot.com/invitation-api).
 
-This library has been developed and open sourced by [moneymaxim](https://www.moneymaxim.co.uk).
+This library was originally developed and open sourced by [moneymaxim](https://www.moneymaxim.co.uk).
 
-We are currently on the look out for PHP programming talent, so please [get in touch](mailto:andrew.carter@moneymaxim.co.uk) if you are interested.
+It has subsequently been forked and updated to use Guzzle7
 
 ## Install
 
 Install using [composer](https://getcomposer.org/):
 
 ```sh
-composer install moneymaxim/trustpilot-invitation-api
+composer install retrochaos/trustpilot-invitation-api
 ```
 
 ## Usage

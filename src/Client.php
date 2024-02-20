@@ -2,42 +2,42 @@
 
 namespace Trustpilot\Api\Invitation;
 
+use DateTimeInterface;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface as GuzzleClientInterface;
+use GuzzleHttp\Exception\GuzzleException;
 use Trustpilot\Api\Authenticator\AccessToken;
 
-class Client
-{
+class Client {
     const ENDPOINT = 'https://invitations-api.trustpilot.com/v1/private/business-units/';
 
     /**
      * @var AccessToken
      */
-    private $accessToken;
+    private AccessToken $accessToken;
 
     /**
      * @var GuzzleClientInterface
      */
-    private $guzzle;
+    private GuzzleClientInterface $guzzle;
 
-    /**
-     * @param string $apiKey
-     * @param AccessToken $accessToken
-     * @param GuzzleClientInterface $guzzle
-     */
+  /**
+   * @param AccessToken $accessToken
+   * @param GuzzleClientInterface|null $guzzle
+   */
     public function __construct(AccessToken $accessToken, GuzzleClientInterface $guzzle = null)
     {
         $this->accessToken = $accessToken;
         $this->guzzle = (null !== $guzzle) ? $guzzle : new GuzzleClient();
     }
 
-    /**
-     * @param string $url
-     * @param array $json
-     * @return array
-     */
-    private function makeRequest($url, array $json = null)
-    {
+  /**
+   * @param string $url
+   * @param array|null $json
+   * @return array
+   * @throws GuzzleException
+   */
+    private function makeRequest(string $url, array $json = null): array {
         $method = 'GET';
         $options = ['query' => ['token' => $this->accessToken->getToken()]];
 
@@ -51,15 +51,16 @@ class Client
         return json_decode((string) $response->getBody(), true);
     }
 
-    /**
-     * @param Context $context
-     * @param Recipient $recipient
-     * @param Sender $sender
-     * @param string $referenceId
-     * @param \DateTimeInterface $time
-     */
-    public function invite(Context $context, Recipient $recipient, Sender $sender, $referenceId, \DateTimeInterface $time = null)
-    {
+  /**
+   * @param Context $context
+   * @param Recipient $recipient
+   * @param Sender $sender
+   * @param string $referenceId
+   * @param DateTimeInterface|null $time
+   * @return array
+   * @throws GuzzleException
+   */
+    public function invite(Context $context, Recipient $recipient, Sender $sender, string $referenceId, DateTimeInterface $time = null): array {
         if (null === $time) {
             $time = new \DateTime();
         }

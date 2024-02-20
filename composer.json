@@ -1,16 +1,21 @@
 {
-    "name": "moneymaxim/trustpilot-invitation-api",
+    "name": "retrochaos/trustpilot-invitation-api",
     "description": "A PHP library for accessing the Trustpilot Invitation API",
     "require": {
-        "php": ">=5.5.0",
-        "guzzlehttp/guzzle": "~6.0",
-        "moneymaxim/trustpilot-authenticator": "^0.1.1"
+        "php": "^7.4 | ^8.0",
+        "guzzlehttp/guzzle": "^6.0 | ^7.0",
+        "retrochaos/trustpilot-authenticator": "^1.0",
+        "ext-json": "*"
     },
     "license": "MIT",
     "authors": [
         {
             "name": "Andrew Carter",
             "email": "andrew.carter@moneymaxim.co.uk"
+        },
+        {
+            "name": "Sam Carnaby",
+            "email": "fc@retrochaos.com"
         }
     ],
     "autoload": {
@@ -24,4 +29,3 @@
         }
     }
 }
-
