@@ -2,13 +2,15 @@
 
 A PHP library for accessing the [Trustpilot Invitation API](https://developers.trustpilot.com/invitation-api).
 
-This library was originally developed and open sourced by [moneymaxim](https://www.moneymaxim.co.uk).
+Originally developed and open-sourced by [moneymaxim](https://www.moneymaxim.co.uk).
 
-It has subsequently been forked and updated to use Guzzle7
+Fully modernised to:
+- Use **Symfony HTTP Client**
+- Provide **type-safe error handling**
 
 ## Install
 
-Install using [composer](https://getcomposer.org/):
+Install using [Composer](https://getcomposer.org/):
 
 ```sh
 composer install retrochaos/trustpilot-invitation-api
