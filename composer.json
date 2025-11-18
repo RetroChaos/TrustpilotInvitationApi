@@ -4,7 +4,7 @@
     "require": {
         "php": ">= 8.2",
         "ext-json": "*",
-        "retrochaos/trustpilot-authenticator": "dev-develop",
+        "retrochaos/trustpilot-authenticator": "^2",
         "symfony/http-client": "^7.3"
     },
     "license": "MIT",
