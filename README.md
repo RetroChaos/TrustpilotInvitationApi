@@ -10,7 +10,7 @@ Fully modernised to:
 
 ## Install
 
-Install using [composer](https://getcomposer.org/):
+Install using [Composer](https://getcomposer.org/):
 
 ```sh
 composer install retrochaos/trustpilot-invitation-api
