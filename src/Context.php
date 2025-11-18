@@ -35,11 +35,17 @@ class Context {
      * @param string[] $tags
      * @param string $locale
      */
-    public function __construct(string $businessUnitId, string $templateId, string $redirectUri, array $tags = null, string $locale = 'en-US') {
+    public function __construct(
+		string $businessUnitId,
+		string $templateId,
+		string $redirectUri,
+		array $tags = null,
+		string $locale = 'en-US'
+    ) {
         $this->businessUnitId = $businessUnitId;
         $this->templateId = $templateId;
         $this->redirectUri = $redirectUri;
-        $this->tags = (null === $tags) ? [] : $tags;
+        $this->tags = $tags ?? [];
         $this->locale = $locale;
     }
 
